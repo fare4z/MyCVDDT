@@ -2,7 +2,9 @@ package com.fare4z.mycv;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +18,8 @@ public class ProfileActivity extends AppCompatActivity {
     TextView tvName,tvEmail,tvNRIC,tvAge;
     Button btn_portfolio;
 
+    SharedPreferences spUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +30,7 @@ public class ProfileActivity extends AppCompatActivity {
         tvNRIC = findViewById(R.id.tvNRIC);
         tvAge = findViewById(R.id.tvAge);
         btn_portfolio = findViewById(R.id.btn_portfolio);
+        spUser = getSharedPreferences("prefUser", Context.MODE_PRIVATE);
 
         Bundle bundle = getIntent().getExtras();
 
@@ -35,7 +40,10 @@ public class ProfileActivity extends AppCompatActivity {
             tvNRIC.setText(bundle.getString("et_nric"));
 
             tvAge.setText("20");
-
+        } else {
+            tvName.setText(spUser.getString("name","-"));
+            tvEmail.setText(spUser.getString("email","-"));
+            tvNRIC.setText(spUser.getString("nric","-"));
         }
 
         btn_portfolio.setOnClickListener(new View.OnClickListener() {
