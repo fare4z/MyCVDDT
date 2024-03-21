@@ -31,6 +31,13 @@ public class LoginActivity extends AppCompatActivity {
 
         String dummyUsername = spUser.getString("email","-");
         String dummyPassword = spUser.getString("password","-");
+
+        Boolean isLoggedIn = sp.getBoolean("isLoggedin", false);
+        if (isLoggedIn) {
+            Intent i = new Intent(getApplicationContext(), ProfileActivity.class);
+            startActivity(i);
+        }
+
         tvRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

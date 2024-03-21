@@ -76,6 +76,12 @@
             android:background="@color/colorAccent"
             android:text="My Portfolio" />
 
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Logout" />
+
     </LinearLayout>
 
 </LinearLayout>
