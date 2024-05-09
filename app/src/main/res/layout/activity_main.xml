@@ -25,7 +25,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/xml_bg_edittext"
             android:hint="Full name"
             android:inputType="textCapWords" />
 
@@ -41,7 +40,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
-            android:background="@drawable/xml_bg_edittext"
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
@@ -55,7 +53,6 @@
             android:id="@+id/et_nric"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/xml_bg_edittext"
             android:ems="10"
             android:hint="IC Number"
             android:inputType="text" />
@@ -206,7 +203,6 @@
             android:id="@+id/tv_login"
             android:layout_marginLeft="6dp"
             android:textStyle="bold"
-            android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Login now."/>

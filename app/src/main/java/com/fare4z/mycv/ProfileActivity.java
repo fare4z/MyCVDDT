@@ -38,13 +38,6 @@ public class ProfileActivity extends AppCompatActivity {
 
         }
 
-        btn_portfolio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), PortfolioActivity.class);
-                startActivity(i);
-            }
-        });
     }
 
 
